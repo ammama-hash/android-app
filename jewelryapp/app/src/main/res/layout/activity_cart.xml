@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/background3"
+    android:gravity="center"
+    android:layout_margin="8dp">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:background="@drawable/ring1"/>
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ring"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        android:paddingTop="8dp"
+        android:gravity="center"/>
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1500Rs/-"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:paddingTop="4dp"
+        android:gravity="center"/>
+
+    <Spinner android:id="@+id/Quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:entries="quantity_list"
+        android:text="quantity"
+        android:spinnerMode="dropdown" />
+
+
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: ₹ 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+
+
+
+    <!-- Checkout button -->
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF5722"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+

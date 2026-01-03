@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeScreenMain">
+
+    <!-- MAIN CONTENT -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D8C3A5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="Tau's Jewelry"
+            app:titleTextColor="@android:color/white" />
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="Welcome to Tau\'s Jewelry"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="Promotional Banner"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner" />
+
+                <!-- 🔹 Category: Rings -->
+                <TextView
+                    style="@style/CategoryTitle"
+                    android:text=" Rings Collection" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ringsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/product_item" />
+
+                <!-- 🔹 Category: Necklaces -->
+                <TextView
+                    style="@style/CategoryTitle"
+                    android:text=" Necklace Collection" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/necklacesRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/product_item" />
+
+                <!-- 🔹 Category: Earrings -->
+                <TextView
+                    style="@style/CategoryTitle"
+                    android:text=" Earrings Collection" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/earringsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/product_item" />
+
+                <!-- 🔹 Category: Bracelets -->
+                <TextView
+                    style="@style/CategoryTitle"
+                    android:text="Bracelet Collection" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/braceletsRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:listitem="@layout/product_item" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- NAVIGATION DRAWER -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

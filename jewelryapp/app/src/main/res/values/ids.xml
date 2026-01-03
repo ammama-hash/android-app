@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnNext" type="id">id</item>
+    <item name="tvSignupLink" type="id">signup_id</item>
+    <item name="listViewCart" type="id">list-id</item>
+</resources>

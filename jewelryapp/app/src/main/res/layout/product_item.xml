@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ProductItemContainer">
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/productImage"
+        style="@style/ProductImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="Product Image"
+        android:src="@drawable/ring1" /> <!-- Yahan par ab code bilkul theek hai -->
+
+    <!-- Product Price below image -->
+    <TextView
+        android:id="@+id/productPrice"
+        style="@style/ProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price" />
+
+    <!-- Add to Cart Button -->
+    <Button
+        android:id="@+id/btnAddToCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AddToCartButton"
+        android:text="Add to Cart"/>
+
+</LinearLayout>
+
